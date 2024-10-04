@@ -1,0 +1,3 @@
+- In This project I have used Identity Framework for Authentication and Authorization with JWT tokens. 
+- Connected to DB using Identity EF Core (Code First Approach)
+- Connected to Angular frontend for User registration and login.
