@@ -24,8 +24,12 @@ app.ConfigureSwaggerExplorer()
     .ConfigureCORS(builder.Configuration)
     .AddIdentityAuthMiddlewares();
 
-app.MapGroup("/api").MapIdentityApi<AppUser>();
-app.MapGroup("/api").MapIdentityUserEndpoints(builder.Configuration);
+app.MapGroup("/api")
+    .MapIdentityApi<AppUser>();
+app.MapGroup("/api")
+    .MapIdentityUserEndpoints()
+    .MapAccountEndpoints()
+    .MapAuthorizationEndpoints();
 
 app.Run();
 
